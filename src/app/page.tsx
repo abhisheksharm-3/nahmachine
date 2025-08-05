@@ -463,7 +463,7 @@ export default function Home() {
               </a>
               
               <a 
-                href="https://abhisheksharma.tech" 
+                href="https://abhisheksan.com" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 
