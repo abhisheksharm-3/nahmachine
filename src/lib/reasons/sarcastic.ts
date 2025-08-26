@@ -1,0 +1,22 @@
+export const sarcasticReasons = [
+  "Nah, I'm allergic to that level of commitment.",
+  "Sorry, my calendar is booked with absolutely nothing.",
+  "I'd rather watch paint dry on a rainy Tuesday.",
+  "That sounds like a problem for future me to decline.",
+  "Sorry, I'm allergic to social obligations.",
+  "My therapist said I need to practice saying no more often.",
+  "I'm allergic to leaving my comfort zone.",
+  "I'd love to, but I'm practicing selective hearing.",
+  "Sorry, I'm busy disappointing my parents in other ways.",
+  "I'd rather fold a fitted sheet blindfolded.",
+  "I'd love to, but I'm busy pretending to be a functional adult.",
+  "My stress levels are already at maximum capacity.",
+  "I'd rather explain social media to a caveman.",
+  "My common sense is telling me this is a trap.",
+  "My morning coffee hasn't given me permission yet.",
+  "I'm busy disappointing my parents in other ways.",
+  "Sorry, I'm busy avoiding people who make plans.",
+  "My bank account and I aren't speaking right now.",
+  "I'd rather explain TikTok to my grandmother.",
+  "I'm in witness protection from social events."
+];

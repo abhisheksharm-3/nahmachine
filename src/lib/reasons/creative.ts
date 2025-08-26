@@ -1,0 +1,22 @@
+export const creativeReasons = [
+  "My pet rock said it's a bad idea.",
+  "Nope, that conflicts with my scheduled existential crisis.",
+  "My horoscope specifically warned against this.",
+  "My imaginary friend thinks it's a terrible idea.",
+  "My WiFi said no, and I trust its judgment.",
+  "Nah, Mercury is in microwave again.",
+  "My anxiety has already RSVPed as a hard no.",
+  "My inner child is having a tantrum about it.",
+  "I'm on a spiritual journey to the land of Nope.",
+  "My guardian angel is out of office until further notice.",
+  "My dog gave me a look that clearly said 'absolutely not.'",
+  "I'm busy reorganizing my sock drawer by color and emotional attachment.",
+  "My GPS doesn't know how to get there anyway.",
+  "I promised my houseplants I'd stay home.",
+  "My WiFi said no, and I trust its judgment.",
+  "My phone battery is at 99% - too risky to leave the house.",
+  "Nah, Mercury is in microwave again.",
+  "My horoscope specifically warned against this.",
+  "My pet rock said it's a bad idea.",
+  "I'm in witness protection from social events."
+];

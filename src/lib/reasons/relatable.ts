@@ -1,0 +1,22 @@
+export const relatedReasons = [
+  "My social battery died and the charger is broken.",
+  "I'm on a strict diet of avoiding responsibilities.",
+  "My anxiety has already RSVPed as a hard no.",
+  "My stress levels are already at maximum capacity.",
+  "I'm busy being professionally antisocial.",
+  "My bank account and I aren't speaking right now.",
+  "My common sense is telling me this is a trap.",
+  "I'd love to, but I'm busy pretending to be a functional adult.",
+  "My morning coffee hasn't given me permission yet.",
+  "I'm allergic to leaving my comfort zone.",
+  "Sorry, I'm allergic to social obligations.",
+  "My therapist said I need to practice saying no more often.",
+  "I'm saving my energy for more important rejections.",
+  "My motivation took a vacation and didn't leave a forwarding address.",
+  "I'm on a strict no-fun diet prescribed by my sanity.",
+  "My inner child is having a tantrum about it.",
+  "I'd rather explain social media to a caveman.",
+  "I'd rather fold a fitted sheet blindfolded.",
+  "I'd rather explain TikTok to my grandmother.",
+  "Sorry, I'm busy disappointing my parents in other ways."
+];

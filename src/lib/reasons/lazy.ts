@@ -1,0 +1,22 @@
+export const lazyReasons = [
+  "I'm in a committed relationship with my couch.",
+  "I'm busy washing my hair for the next 6 months.",
+  "I promised my houseplants I'd stay home.",
+  "I'd love to, but I'm practicing the ancient art of doing nothing.",
+  "My phone battery is at 99% - too risky to leave the house.",
+  "I'm busy reorganizing my sock drawer by color and emotional attachment.",
+  "I promised my Netflix I wouldn't cheat on it.",
+  "Sorry, I'm fully booked with important cat videos.",
+  "I'm saving my energy for more important rejections.",
+  "My social battery died and the charger is broken.",
+  "I'm allergic to plans that require pants.",
+  "Sorry, I'm in a serious relationship with procrastination.",
+  "My bed and I have an exclusive contract.",
+  "I'm allergic to activities that require effort.",
+  "Sorry, I'm practicing the ancient art of hermit-ing.",
+  "My motivation took a vacation and didn't leave a forwarding address.",
+  "I'm on a strict diet of avoiding responsibilities.",
+  "I'm busy being professionally antisocial.",
+  "I'm on a strict no-fun diet prescribed by my sanity.",
+  "Sorry, I'm busy avoiding people who make plans."
+];

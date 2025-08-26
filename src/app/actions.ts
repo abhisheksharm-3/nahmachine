@@ -1,34 +1,111 @@
 "use server";
 
 import { generateContent } from "@/lib/gemini";
+import { 
+  uniqueReasons, 
+  reasonCategories, 
+  type ReasonCategory 
+} from "@/lib/reasons";
 
 // This ensures the API key is only used server-side
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 const GEMINI_MODEL = "gemini-2.0-flash";
 
 /**
- * Fetch a reason to say no from the external API
+ * Get a creative reason to say no from our own collection
  */
 export async function getNoReason() {
   try {
-    const response = await fetch("https://naas.isalman.dev/no", {
-      cache: "no-store",
-    });
-
-    if (!response.ok) {
-      throw new Error(`API responded with status: ${response.status}`);
-    }
-
-    const data = await response.json();
+    // Get a random reason from our collection
+    const randomIndex = Math.floor(Math.random() * uniqueReasons.length);
+    const selectedReason = uniqueReasons[randomIndex];
     
-    if (data && data.reason) {
-      return { message: data.reason };
-    } else {
-      return { message: "I can't right now. Try again for another reason." };
-    }
+    // Add a small delay to simulate API call (optional)
+    await new Promise(resolve => setTimeout(resolve, Math.random() * 500 + 100));
+    
+    return { message: selectedReason };
   } catch (error) {
-    console.error("Failed to fetch reason:", error);
-    return { message: "Sorry, I couldn't think of a reason right now." };
+    console.error("Failed to get reason:", error);
+    return { message: "Nah, something went wrong and even my backup plan said no." };
+  }
+}
+
+/**
+ * Get multiple creative reasons at once
+ */
+export async function getMultipleNoReasons(count: number = 3) {
+  try {
+    if (count > 10) count = 10; // Limit to prevent spam
+    if (count < 1) count = 1;
+    
+    const shuffled = [...uniqueReasons].sort(() => 0.5 - Math.random());
+    const selectedReasons = shuffled.slice(0, count);
+    
+    // Add a small delay to simulate processing
+    await new Promise(resolve => setTimeout(resolve, Math.random() * 300 + 50));
+    
+    return { messages: selectedReasons };
+  } catch (error) {
+    console.error("Failed to get multiple reasons:", error);
+    return { messages: ["Nah, something went wrong and even my backup plans said no."] };
+  }
+}
+
+/**
+ * Get a reason based on a specific category/mood
+ */
+export async function getNoReasonByCategory(category: ReasonCategory = 'random') {
+  try {
+    let filteredReasons: string[] = [];
+    
+    if (category === 'random') {
+      filteredReasons = uniqueReasons;
+    } else {
+      filteredReasons = reasonCategories[category] || uniqueReasons;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * filteredReasons.length);
+    const selectedReason = filteredReasons[randomIndex];
+    
+    await new Promise(resolve => setTimeout(resolve, Math.random() * 400 + 100));
+    
+    return { message: selectedReason, category };
+  } catch (error) {
+    console.error("Failed to get categorized reason:", error);
+    return { message: "Nah, my excuse generator is having technical difficulties.", category };
+  }
+}
+
+/**
+ * Get statistics about available reasons
+ */
+export async function getReasonStats() {
+  try {
+    const stats = {
+      total: uniqueReasons.length,
+      categories: Object.entries(reasonCategories).map(([name, reasons]) => ({
+        name,
+        count: reasons.length
+      }))
+    };
+    
+    return { stats };
+  } catch (error) {
+    console.error("Failed to get reason stats:", error);
+    return { stats: { total: 0, categories: [] } };
+  }
+}
+
+/**
+ * Get all available categories
+ */
+export async function getAvailableCategories() {
+  try {
+    const categories = Object.keys(reasonCategories) as ReasonCategory[];
+    return { categories: [...categories, 'random'] };
+  } catch (error) {
+    console.error("Failed to get categories:", error);
+    return { categories: ['random'] };
   }
 }
 
