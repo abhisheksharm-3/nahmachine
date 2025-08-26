@@ -2,6 +2,7 @@ import { lazyReasons } from './lazy';
 import { sarcasticReasons } from './sarcastic';
 import { creativeReasons } from './creative';
 import { relatedReasons } from './relatable';
+import { professionalReasons } from './professional';
 // import { professionalReasons } from './professional'; // Uncomment to enable
 
 export type ReasonCategory = 'lazy' | 'sarcastic' | 'creative' | 'relatable' | 'random';
@@ -22,7 +23,7 @@ export const allReasons = [
   ...sarcasticReasons,
   ...creativeReasons,
   ...relatedReasons,
-  // ...professionalReasons, // Uncomment to enable
+  ...professionalReasons
 ];
 
 // Remove duplicates
