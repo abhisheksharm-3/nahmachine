@@ -9,7 +9,7 @@ import {
 
 // This ensures the API key is only used server-side
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
-const GEMINI_MODEL = "gemini-2.0-flash";
+const GEMINI_MODEL = "gemini-2.5-flash-lite";
 
 /**
  * Get a creative reason to say no from our own collection
